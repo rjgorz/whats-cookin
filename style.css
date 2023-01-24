@@ -4,20 +4,45 @@
     color: #000;
 }
 
+.popup {
+    position: absolute;
+    background-image: linear-gradient(rgba(255,255,255,0.25), rgba(255,255,255,0.25)), url('https://wallpaperaccess.com/full/1843875.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    left: 0;
+    top: 0;
+    min-width: 100%;
+    min-height: 100%;
+}
+
+#start-header {
+    padding: 15px 15px 0 15px;
+    margin: 15% 0 0 5%;
+}
+
+#get-started {
+    margin: 1% 0 0 5%;
+    cursor: pointer;
+    animation: pulse 1s linear infinite;
+}
+
 #background header {
     text-align: center;
-    font-variant: small-caps;
+    padding: 30px;
+}
+
+#background.open {
+    transition: 3s right ease-in-out;
+    right: 0;
 }
 
 #background {
     background-image: url('https://c1.wallpaperflare.com/path/728/773/157/table-fabric-plaid-red-26861886eb198dc7d73da3a706186c85.jpg');
-    /* background-repeat: no-repeat; */
-    /* background-attachment: fixed; */
     background-size: cover;
     min-height: 100vh;
     position: fixed;
     bottom: 0;
-    right: 0;
+    right: 100%;
     left: 0;
     top: 0;
     overflow-y: auto;
@@ -150,14 +175,12 @@ form {
 }
 
 #category-search-form {
-    /* a */
     margin-left: 100px;
 }
 
 .meal-container {
     width: 60%;
     background: rgb(235, 235, 235);
-    /* flex-direction: column; */
     border-radius: 20px;
     position: absolute;
     top: 0;
@@ -181,8 +204,6 @@ form {
 .meal-container #food-img {
     float: left;
     width: 50%;
-    /* height: 400px;
-    width: 400px; */
     border: 3px solid #000;
     border-radius: 20px;
 }
@@ -202,7 +223,6 @@ form {
 .meal-container p {
     float: left;
     text-align: left;
-    /* padding-top: 25px; */
     clear: both;
     
 }
@@ -217,8 +237,6 @@ form {
     overflow-y: auto;
     filter: none;
     box-shadow: rgba(45, 35, 66, 0.4) 0 16px 32px, rgba(45, 35, 66, 0.3) 0 28px 52px -12px;
-    /* scrollbar-gutter: auto; */
-    /* scrollbar-width: thin; */
 }
 
 .background {
@@ -233,7 +251,6 @@ form {
     justify-content: flex-end;
     margin-top: 25px;
     cursor: pointer;
-    /* background:rgb(226, 226, 226); */
 }
 
 #meals-list {
@@ -268,5 +285,20 @@ form {
     100% {
       opacity: 1;
       transform: scale(1, 1);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        -webkit-transform: scale(1.2);
+        transform: scale(1.2);
+    }
+    50% {
+       -webkit-transform: scale(0.8);
+       transform: scale(0.8);
+    }
+    100% {
+        -webkit-transform: scale(1.2);
+       transform: scale(1.2);
     }
 }
