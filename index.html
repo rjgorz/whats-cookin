@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <link rel="stylesheet" type="text/css" href="./style.css" />
+            <script defer src="./index.js"></script>
+        </head>
+        <body>
+            <div id="background">
+                <header>
+                    <h1>WHAT'S COOKIN?</h1>
+                </header>
+                <div id="form-selection">
+                    <div id="form-buttons">
+                        <button class="form-buttons">Search By Main Ingredient</button>
+                        <button class="form-buttons">Search By Category</button>
+                        <button class="form-buttons">Random Food!</button>
+                    </div>
+                    <div id="forms">
+                        <div id="make-selection">
+                            <h2>Make a Selection!</h2>
+                        </div>
+                        <form id="ingredient-search-form">
+                            <label>Enter a Main Ingredient:</label>
+                            <input type="text" name="ingredient" id="ingredient" placeholder="Main Ingredient..." />
+                            <input type="submit" id="submit" />
+                        </form>
+                        <form id="category-search-form">
+                            <label>Choose a Category: </label>
+                            <select name="category" id="category">
+                                <option value="...">...</option>
+                            </select>
+                        </form>
+                        <button id="reset">Reset Forms</button>
+                    </div>
+                </div>
+                
+                <div id="meals-list">
+
+                </div>
+            </div>
+            
+            <div class="meal-container">
+
+            </div>
+        </body>
+    </html>
