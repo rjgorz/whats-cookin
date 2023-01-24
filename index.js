@@ -1,4 +1,3 @@
-const body = document.querySelector('body');
 const mealContainer = document.querySelector('.meal-container');
 const mealsList = document.querySelector('#meals-list');
 const background = document.querySelector('#background');
@@ -10,6 +9,12 @@ const selectForm = document.querySelector('#category');
 const categoryForm = document.querySelector('#category-search-form');
 const makeSelection = document.querySelector('#make-selection');
 const resetButton = document.querySelector('#reset');
+const getStarted = document.querySelector('#get-started');
+const popup = document.querySelector('.popup');
+
+window.addEventListener('load', () => {
+    popup.style.display = 'block';
+});
 
 function renderRandom() {
     fetch('https://www.themealdb.com/api/json/v1/1/random.php')
@@ -58,14 +63,11 @@ function renderMealCard(meal) {
     }    
 }
 
-
 function fetchSearchCategories() {
     fetch('https://www.themealdb.com/api/json/v1/1/categories.php')
     .then(r => r.json())
     .then(categories => appendSearchCategories(categories.categories));
 }
-
-
 
 function appendSearchCategories(categories) {
     categories.forEach(category => {
@@ -98,6 +100,12 @@ function buttonListeners() {
     });
     resetButton.addEventListener('click', () => {
         resetPage();
+    });
+    getStarted.addEventListener('click', () => {
+        background.classList.add('open');
+        setTimeout(() => {
+            popup.style.display = 'none';
+        }, 3000)
     });
 }
 
