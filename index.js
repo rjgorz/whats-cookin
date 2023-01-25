@@ -60,7 +60,12 @@ function renderMealCard(meal) {
         const p = document.createElement('p');
         p.textContent = instructions[i];
         mealContainer.append(p);
-    }    
+    }
+
+    const p = document.createElement('p');
+    p.textContent = '.';
+    p.style.opacity = '0';
+    mealContainer.append(p);
 }
 
 function fetchSearchCategories() {
