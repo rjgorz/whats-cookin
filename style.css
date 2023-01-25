@@ -5,7 +5,7 @@
 
 }
 
-#background header{
+#background header {
     text-align: center;
     font-variant: small-caps;
 }    
@@ -46,6 +46,7 @@ header {
     font-family: 'Lobster', sans-serif;
     font-size: 96px;
     padding-bottom: 96px;
+    min-width: 1000px;
 }
 
 #background.open {
@@ -84,6 +85,7 @@ header {
     justify-content: center;
     margin-top: 50px;
     height: 300px;
+    min-width: 1000px;
 }
 
 #form-buttons {
@@ -379,6 +381,7 @@ form {
 }
 
 
+
 ::-webkit-scrollbar {
     width: 15px;
 }
@@ -402,6 +405,10 @@ form {
     margin-block: 10px;
     border-radius: 15px; 
 } 
+
+footer {
+    min-width: 1000px;
+}
 
 
 @keyframes pulse {
