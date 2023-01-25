@@ -58,14 +58,13 @@ header {
 
 #background footer {
     font-variant: small-caps;
+    font-weight: bold;
     text-align: center;
-    background-color: rgba(206, 206, 206, 0.75);
-    padding: 1rem;
+    background-color: #fdfdfd87;
+    padding: 0;
     margin-top: auto;
+    
 }
-/* footer.h3{
-    margin: 0;
-} */
 
 #background {
     background-image: url('https://c1.wallpaperflare.com/path/728/773/157/table-fabric-plaid-red-26861886eb198dc7d73da3a706186c85.jpg');
@@ -152,9 +151,11 @@ header {
     transition: box-shadow .15s,transform .15s;
     font-size: 12px;
     height: max-content;
-    margin-top: 10%;
-    margin-left: 87%;
-    position: static;
+    /* margin-top: 10%;
+    margin-left: 87%; */
+    bottom: 25px;
+    right: 25px;
+    position: absolute;
 }
 
 .form-buttons:focus {
@@ -220,13 +221,22 @@ form {
     /* display: flex;*/
     justify-content: center; 
     text-align: center;
+    position:absolute;
+    top: 35%;
+    right:15%;
+    left: 15%;
     
 }
 
 #category-search-form {
 
-    /* a */
-    justify-content: center;
+    
+    /* justify-content: center; */
+    text-align: center;
+    position: absolute;
+    top: 35%;
+    right:15%;
+    left: 15%;
 
 }
 
@@ -239,7 +249,7 @@ form {
     left: 50%;
     transform: translate(-50%, -50%) scale(0.1);
     text-align: center;
-    padding: 0 30px 30px;
+    padding: 0px 30px 30px 30px;
     color: #000;
     visibility: hidden;
     transition: transform 0.5s, top 0.5s;
@@ -290,6 +300,7 @@ form {
     filter: none;
     box-shadow: rgba(45, 35, 66, 0.4) 0 16px 32px, rgba(45, 35, 66, 0.3) 0 28px 52px -12px;
     border: 5px solid rgba(255, 255, 255, 0);
+    padding: 0px 20px 30px 30px;
 }
 
 .background {
@@ -300,7 +311,7 @@ form {
     float: right;
     height: 45px;
     width: 45px;
-    padding: 2px 5px;
+    /* padding: 2px 5px; */
     /* justify-content: flex-end; */
     margin-top: 10px;
     cursor: pointer;
@@ -341,12 +352,12 @@ form {
     }
 }
 
-::-webkit-scrollbar {
+.open-meal-container::-webkit-scrollbar {
     width: 15px;
 }
   
   /* Track */
-::-webkit-scrollbar-track {
+.open-meal-container::-webkit-scrollbar-track {
     background: #fdfdfd68;
     margin-block: 10px;
     border-radius: 15px; 
@@ -356,22 +367,49 @@ form {
 }
    
   /* Handle */
-::-webkit-scrollbar-thumb {
+.open-meal-container::-webkit-scrollbar-thumb {
     background: rgba(153, 0, 0, 0.7); 
     margin-block: 10px;
     border-radius: 15px; 
 }
   
   /* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
+.open-meal-container::-webkit-scrollbar-thumb:hover {
     background: rgba(110, 0, 0, 0.7); 
     margin-block: 10px;
     border-radius: 15px; 
 }
 
+
+
+::-webkit-scrollbar {
+    width: 15px;
+}
+
+::-webkit-scrollbar-track {
+    background: #fdfdfd68;
+    border-radius: 15px 15px 0 0; 
+    margin-top: 15px;
+}
+   
+ 
+::-webkit-scrollbar-thumb {
+    background: rgba(153, 0, 0, 0.7); 
+    margin-block: 10px;
+    border-radius: 15px; 
+}
+  
+ 
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(110, 0, 0, 0.7); 
+    margin-block: 10px;
+    border-radius: 15px; 
+} 
+
 footer {
     min-width: 1000px;
 }
+
 
 @keyframes pulse {
     0% {
