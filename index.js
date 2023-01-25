@@ -192,6 +192,7 @@ window.addEventListener('keydown', (e) => {
     }
 });
 
+
 buttonListeners();
 fetchSearchCategories();
 categorySelector();
