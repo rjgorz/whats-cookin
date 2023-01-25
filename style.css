@@ -2,13 +2,26 @@
     font-family: "Optima",sans-serif;
     font-weight: 200;
     color: #000;
+
 }
 
-#background header {
+
+#background header{
     text-align: center;
     font-variant: small-caps;
-    /* this is my test */
+    
 }
+
+#background footer {
+    font-variant: small-caps;
+    text-align: center;
+    background-color: rgba(206, 206, 206, 0.75);
+    padding: 1rem;
+    margin-top: auto;
+}
+/* footer.h3{
+    margin: 0;
+} */
 
 #background {
     background-image: url('https://c1.wallpaperflare.com/path/728/773/157/table-fabric-plaid-red-26861886eb198dc7d73da3a706186c85.jpg');
@@ -22,6 +35,9 @@
     left: 0;
     top: 0;
     overflow-y: auto;
+    display:flex;
+    flex-direction: column;
+
 }
 
 #form-selection {
@@ -30,7 +46,16 @@
     height: 300px;
 }
 
-#form-buttons, #forms {
+#form-buttons {
+    width: 35%;
+    border: 3px solid #000;
+    border-radius: 20px;
+    padding: 25px;
+    background-color: rgba(206, 206, 206, 0.75);
+    position: relative;
+    margin-bottom: 25px;
+}
+#forms {
     width: 35%;
     border: 3px solid #000;
     border-radius: 20px;
@@ -70,6 +95,7 @@
     text-align: center;
     transition: box-shadow .15s,transform .15s;
     font-size: 18px;
+    font-weight: bold;
 }
 
 #reset {
@@ -147,12 +173,16 @@ form {
 }
 
 #ingredient-search-form {
-    margin-left: 15px;
+    /* margin-left: 15px; */
+    /* display: flex;*/
+    justify-content: center; 
+    text-align: center;
+    
 }
 
 #category-search-form {
     /* a */
-    margin-left: 100px;
+    justify-content: center;
 }
 
 .meal-container {
@@ -169,14 +199,15 @@ form {
     color: #000;
     visibility: hidden;
     transition: transform 0.5s, top 0.5s;
-    scrollbar-gutter: auto;
-    scrollbar-width: thin;
+    /* scrollbar-gutter: auto;
+    scrollbar-width: thin; */
 }
 
 .meal-container h2 {
     text-align: left;
-    margin-left: 20px;
+    margin-left: 7px;
     font-weight: bold;
+    font-variant: small-caps;
 }
 
 .meal-container #food-img {
@@ -218,8 +249,7 @@ form {
     overflow-y: auto;
     filter: none;
     box-shadow: rgba(45, 35, 66, 0.4) 0 16px 32px, rgba(45, 35, 66, 0.3) 0 28px 52px -12px;
-    /* scrollbar-gutter: auto; */
-    /* scrollbar-width: thin; */
+    
 }
 
 .background {
@@ -228,11 +258,11 @@ form {
 
 #close {
     float: right;
-    height: 50px;
-    width: 50px;
+    height: 45px;
+    width: 45px;
     padding: 2px 5px;
-    justify-content: flex-end;
-    margin-top: 25px;
+    /* justify-content: flex-end; */
+    margin-top: 10px;
     cursor: pointer;
     /* background:rgb(226, 226, 226); */
 }
@@ -270,4 +300,32 @@ form {
       opacity: 1;
       transform: scale(1, 1);
     }
+}
+
+::-webkit-scrollbar {
+    width: 15px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #fdfdfd68;
+    margin-block: 10px;
+    border-radius: 15px; 
+    margin-top: 15px;
+    margin-bottom: 15px;
+    scroll-padding-right: 10px;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: rgba(153, 0, 0, 0.7); 
+    margin-block: 10px;
+    border-radius: 15px; 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(110, 0, 0, 0.7); 
+    margin-block: 10px;
+    border-radius: 15px; 
 }
