@@ -1,5 +1,5 @@
 * {
-    font-family: "Optima",sans-serif;
+    font-family: "Optima", sans-serif;
     font-weight: 200;
     color: #000;
 
@@ -10,6 +10,47 @@
     text-align: center;
     font-variant: small-caps;
     
+
+.popup {
+    position: absolute;
+    background-image: linear-gradient(rgba(255,255,255,0.25), rgba(255,255,255,0.25)), url('https://wallpaperaccess.com/full/1843875.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    left: 0;
+    top: 0;
+    min-width: 100%;
+    min-height: 100%;
+}
+
+#start-header {
+    font-family: 'Lobster', sans-serif;
+    font-size: 96px;
+    padding: 15px 15px 0 15px;
+    margin: 18% 0 0 0;
+    scale: 0.8;
+}
+
+#get-started {
+    margin: 0 0 0 9%;
+    cursor: pointer;
+    animation: pulse 1s linear infinite;
+}
+
+header {
+    height: 124px;
+    margin-bottom: 24px;
+}
+
+#background header h2 {
+    text-align: center;
+    font-family: 'Lobster', sans-serif;
+    font-size: 96px;
+}
+
+#background.open {
+    transition: 3s right ease-in-out;
+    right: 0;
+
 }
 
 #background footer {
@@ -25,13 +66,11 @@
 
 #background {
     background-image: url('https://c1.wallpaperflare.com/path/728/773/157/table-fabric-plaid-red-26861886eb198dc7d73da3a706186c85.jpg');
-    /* background-repeat: no-repeat; */
-    /* background-attachment: fixed; */
     background-size: cover;
     min-height: 100vh;
     position: fixed;
     bottom: 0;
-    right: 0;
+    right: 100%;
     left: 0;
     top: 0;
     overflow-y: auto;
@@ -158,7 +197,8 @@
 form {
     font-size: 24px;
     position: relative;
-    margin-top: 100px;
+    margin-top: 15%;
+    margin-left: 100px;
     margin-bottom: 14px;
     display: none;
 }
@@ -181,14 +221,15 @@ form {
 }
 
 #category-search-form {
+
     /* a */
     justify-content: center;
+
 }
 
 .meal-container {
     width: 60%;
     background: rgb(235, 235, 235);
-    /* flex-direction: column; */
     border-radius: 20px;
     position: absolute;
     top: 0;
@@ -213,8 +254,6 @@ form {
 .meal-container #food-img {
     float: left;
     width: 50%;
-    /* height: 400px;
-    width: 400px; */
     border: 3px solid #000;
     border-radius: 20px;
 }
@@ -234,9 +273,7 @@ form {
 .meal-container p {
     float: left;
     text-align: left;
-    /* padding-top: 25px; */
     clear: both;
-    
 }
 
 .open-meal-container {
@@ -249,7 +286,6 @@ form {
     overflow-y: auto;
     filter: none;
     box-shadow: rgba(45, 35, 66, 0.4) 0 16px 32px, rgba(45, 35, 66, 0.3) 0 28px 52px -12px;
-    
 }
 
 .background {
@@ -264,7 +300,6 @@ form {
     /* justify-content: flex-end; */
     margin-top: 10px;
     cursor: pointer;
-    /* background:rgb(226, 226, 226); */
 }
 
 #meals-list {
@@ -328,4 +363,19 @@ form {
     background: rgba(110, 0, 0, 0.7); 
     margin-block: 10px;
     border-radius: 15px; 
+
+@keyframes pulse {
+    0% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+    50% {
+       -webkit-transform: scale(0.8);
+       transform: scale(0.8);
+    }
+    100% {
+        -webkit-transform: scale(1);
+       transform: scale(1);
+    }
+
 }
