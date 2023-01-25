@@ -10,7 +10,7 @@ const categoryForm = document.querySelector('#category-search-form');
 const makeSelection = document.querySelector('#make-selection');
 const resetButton = document.querySelector('#reset');
 const getStarted = document.querySelector('#get-started');
-const popup = document.querySelector('.popup');
+const popup = document.querySelector('#popup');
 
 window.addEventListener('load', () => {
     popup.style.display = 'block';
@@ -110,6 +110,7 @@ function buttonListeners() {
         background.classList.add('open');
         setTimeout(() => {
             popup.style.display = 'none';
+            background.style['min-width'] = '1000px';
         }, 3000)
     });
 }
