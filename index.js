@@ -1,3 +1,5 @@
+//////////////////// IDENTIFIERS /////////////////////////////
+
 const mealContainer = document.querySelector('.meal-container');
 const mealsList = document.querySelector('#meals-list');
 const background = document.querySelector('#background');
@@ -12,9 +14,13 @@ const resetButton = document.querySelector('#reset');
 const getStarted = document.querySelector('#get-started');
 const popup = document.querySelector('#popup');
 
+//////////////////// OPENING POP UP /////////////////////////////
+
 window.addEventListener('load', () => {
     popup.style.display = 'block';
 });
+
+//////////////////// CREATING AND PULLING UP MEAL CARDS /////////////////////////////
 
 function renderRandom() {
     fetch('https://www.themealdb.com/api/json/v1/1/random.php')
@@ -68,6 +74,24 @@ function renderMealCard(meal) {
     mealContainer.append(p);
 }
 
+//////////////////// SEARCH RECIPES BY INGREDIENTS /////////////////////////////
+
+function ingredientSelector() {
+    ingredientForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const ingredient = e.target.ingredient.value;
+        console.log(ingredient.replace(' ', '_'));
+        ingredientForm.reset();
+        mealsList.innerHTML = '';
+
+        fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?i=${ingredient}`)
+        .then(r => r.json())
+        .then(choiceMeals => renderMealList(choiceMeals.meals));
+    });
+}
+
+//////////////////// SEARCH RECIPES BY CATEGORIES /////////////////////////////
+
 function fetchSearchCategories() {
     fetch('https://www.themealdb.com/api/json/v1/1/categories.php')
     .then(r => r.json())
@@ -82,6 +106,18 @@ function appendSearchCategories(categories) {
         selectForm.append(option);
     });
 }
+
+function categorySelector() {
+    categoryForm.addEventListener('change', e => {
+        mealsList.innerHTML = '';
+        const category = e.target.value;
+        fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?c=${category}`)
+        .then(r => r.json())
+        .then(r => renderMealList(r.meals));
+    });
+}
+
+//////////////////// ALL BUTTON LISTENERS /////////////////////////////
 
 function buttonListeners() {
     ingredientButton.addEventListener('click', () => {
@@ -115,30 +151,7 @@ function buttonListeners() {
     });
 }
 
-function ingredientSelector() {
-    ingredientForm.addEventListener('submit', (e) => {
-        e.preventDefault();
-        const ingredient = e.target.ingredient.value;
-        console.log(ingredient.replace(' ', '_'));
-        ingredientForm.reset();
-        mealsList.innerHTML = '';
-
-        fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?i=${ingredient}`)
-        .then(r => r.json())
-        .then(choiceMeals => renderMealList(choiceMeals.meals));
-    });
-}
-
-
-function categorySelector() {
-    categoryForm.addEventListener('change', e => {
-        mealsList.innerHTML = '';
-        const category = e.target.value;
-        fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?c=${category}`)
-        .then(r => r.json())
-        .then(r => renderMealList(r.meals));
-    });
-}
+//////////////////// CREATE MEAL LIST ICONS /////////////////////////////
 
 function renderMealList(meals) {
     if(meals === null)
@@ -166,6 +179,8 @@ function renderMealList(meals) {
     }
 }
 
+//////////////////// RESET FUNCTION /////////////////////////////
+
 function resetPage() {
     ingredientForm.style.display = 'none';
     categoryForm.style.display = 'none';
@@ -177,6 +192,8 @@ function resetPage() {
     categoryForm.reset();
     ingredientForm.reset();
 }
+
+//////////////////// PRESS ESC TO CLOSE MENU CARD /////////////////////////////
 
 function hideMealCard(){
     mealContainer.classList.remove('open-meal-container');
@@ -193,6 +210,7 @@ window.addEventListener('keydown', (e) => {
     }
 });
 
+//////////////////// CALLING ALL FUNCTIONS /////////////////////////////
 
 buttonListeners();
 fetchSearchCategories();
