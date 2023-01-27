@@ -2,11 +2,14 @@
     <html lang="en">
         <head>
             <link rel="stylesheet" type="text/css" href="./style.css" />
-            <link href="https://fonts.cdnfonts.com/css/optima" rel="stylesheet">
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
             <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster">
+            <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Questrial&display=swap">
             <script defer src="./index.js"></script>
         </head>
         <body>
+            <!-- START "PAGE" -->
             <div id="popup">
                 <div id="popup-content">
                     <h1 id="start-header">Get Ready To Cook!</h1>
@@ -18,20 +21,24 @@
                     <h2>What's Cookin'</h2>
                 </header>
                 <div id="form-selection">
+                    <!-- DIV TO HOLD SELECTION BUTTONS -->
                     <div id="form-buttons">
                         <button class="form-buttons">Search By Main Ingredient</button>
                         <button class="form-buttons">Search By Category</button>
                         <button class="form-buttons">Random Food!</button>
                     </div>
+                    <!-- DIV TO HOLD FORMS ON BUTTON CLICK -->
                     <div id="forms">
                         <div id="make-selection">
                             <h2>Make a Selection!</h2>
                         </div>
+                        <!-- MAIN INGREDIENT SEARCH FORM -->
                         <form id="ingredient-search-form">
                             <label>Enter a Main Ingredient:</label>
                             <input type="text" name="ingredient" id="ingredient" placeholder="Main Ingredient..." />
                             <input type="submit" id="submit" />
                         </form>
+                        <!-- CATEGORY SEARCH DROP DOWN MENU -->
                         <form id="category-search-form">
                             <label>Choose a Category: </label>
                             <select name="category" id="category">
@@ -41,7 +48,7 @@
                         <button id="reset">Reset Forms</button>
                     </div>
                 </div>
-                
+                <!-- CONTAINER TO HOLD MEAL ICONS FROM FETCHED DATA -->
                 <div id="meals-list">
 
                 </div>
@@ -50,7 +57,7 @@
                 </footer>
 
             </div>
-            
+            <!-- CONTAINER TO HOLD MODAL POPUP FOR RECIPE CARD -->
             <div class="meal-container">
 
             </div>

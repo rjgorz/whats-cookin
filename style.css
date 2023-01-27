@@ -1,8 +1,8 @@
 * {
-    font-family: "Optima", sans-serif;
-    font-weight: 200;
+    /* font-family: 'Josefin Sans', sans-serif; */
+    font-family: 'Questrial', sans-serif;
+    /* font-weight: 400; */
     color: #000;
-
 }
 
 #background header {
@@ -119,7 +119,7 @@ header {
     display: flex;
     height: 48px;
     justify-content: center;
-    margin: 25px auto;
+    margin: 20px auto;
     padding-left: 16px;
     padding-right: 16px;
     transition: box-shadow .15s,transform .15s;
@@ -158,44 +158,16 @@ header {
     position: absolute;
 }
 
-.form-buttons:focus {
+.form-buttons:focus, #submit:focus, #reset:focus {
     box-shadow: #D6D6E7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
 }
 
-.form-buttons:hover {
+.form-buttons:hover, #submit:hover, #reset:hover {
     box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
     transform: translateY(-2px);
 }
 
-.form-buttons:active {
-    box-shadow: #D6D6E7 0 3px 7px inset;
-    transform: translateY(2px);
-}
-
-#submit:focus {
-    box-shadow: #D6D6E7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
-}
-
-#submit:hover {
-    box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
-    transform: translateY(-2px);
-}
-
-#submit:active {
-    box-shadow: #D6D6E7 0 3px 7px inset;
-    transform: translateY(2px);
-}
-
-#reset:focus {
-    box-shadow: #D6D6E7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
-}
-
-#reset:hover {
-    box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
-    transform: translateY(-2px);
-}
-
-#reset:active {
+.form-buttons:active, #submit:active, #reset:active {
     box-shadow: #D6D6E7 0 3px 7px inset;
     transform: translateY(2px);
 }
@@ -203,7 +175,6 @@ header {
 form {
     font-size: 24px;
     position: relative;
-
     display: none;
 }
 
@@ -229,8 +200,6 @@ form {
 }
 
 #category-search-form {
-
-    
     /* justify-content: center; */
     text-align: center;
     position: absolute;
@@ -269,6 +238,7 @@ form {
     width: 50%;
     border: 3px solid #000;
     border-radius: 20px;
+    margin-bottom: 20px;
 }
 
 .meal-container ul {
@@ -281,12 +251,14 @@ form {
 
 .meal-container li {
     font-weight: bold;
+    font-size: 18px;
 }
 
 .meal-container p {
     float: left;
     text-align: left;
     clear: both;
+    font-size: 18px;
 }
 
 .open-meal-container {

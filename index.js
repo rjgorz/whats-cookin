@@ -36,7 +36,6 @@ function renderMealCard(meal) {
     const h2 = document.createElement('h2');
     const closeButton = document.createElement('img');
     const ul = document.createElement('ul');
-    const br = document.createElement('br');
     
     img.src = meal.strMealThumb;
     img.id = 'food-img';
@@ -48,7 +47,7 @@ function renderMealCard(meal) {
         hideMealCard();
     });
 
-    mealContainer.append(closeButton, h2, img, ul, br);
+    mealContainer.append(closeButton, h2, img, ul);
 
     for(let i = 1; i <= 20; i++) {
         if(meal[`strIngredient${i}`] === '' || meal[`strIngredient${i}`] === null)
@@ -80,7 +79,7 @@ function ingredientSelector() {
     ingredientForm.addEventListener('submit', (e) => {
         e.preventDefault();
         const ingredient = e.target.ingredient.value;
-        console.log(ingredient.replace(' ', '_'));
+        ingredient.replace(' ', '_');
         ingredientForm.reset();
         mealsList.innerHTML = '';
 
