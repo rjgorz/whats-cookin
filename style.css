@@ -287,6 +287,11 @@ form {
     /* justify-content: flex-end; */
     margin-top: 10px;
     cursor: pointer;
+    opacity: .7;
+}
+
+#close:hover {
+    opacity: 1;
 }
 
 #meals-list {
